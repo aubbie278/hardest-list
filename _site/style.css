@@ -1,0 +1,38 @@
+body {
+  background-color: #1b1212; 
+  color: #ffffff; /* red */
+  img {
+      width: 80px;
+      height: 48px;
+  };
+}
+
+#list {
+    table {
+        font-size: 125%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    tbody {
+        border-style: ridge;
+    }
+
+    tr:nth-child(even) {
+        background-color:#251919;
+    }
+
+}
+
+#websites {
+    background-color:#251919;
+    margin-top: 25px;
+}
+
+#websites a::after  {
+    content: "·";
+    display: inline-block;
+    color: white;
+    margin-left: 5px;
+}

@@ -1,0 +1,52 @@
+---
+title: aubbie's hardests list
+---
+
+<!DOCTYPE <!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>{{ page.title }}</title>
+        <link rel="stylesheet" href="/style.css">
+    </head>
+
+    <body>
+        <div id="title">
+            <h1>aubbie's hardest demonslist</h1>
+        </div>
+        
+        <div id="list">
+            <div hidden>
+                {% increment level_counter %}    
+            </div>
+            <table>
+                {% for level in site.data.levels %}
+                    <tr>
+                        <td>
+                            #{% increment level_counter %}
+                        </td>
+
+                        <td>
+                            <img src="https://img.youtube.com/vi/{{ level.youtube_id }}/sddefault.jpg">
+                        </td>
+
+                        <td>
+                            {{ level.name }}
+                        </td>
+
+                        <td>
+                            {{ level.author }}
+                        </td>
+                    </tr>
+                {% endfor %}
+            </table>
+        </div>
+
+        <div id="websites">
+            <footer>
+                <a href="https://jekyllrb.com/">made using jekyll</a>
+                <a href="https://github.com">github</a>
+            </footer>
+        </div>
+    </body>
+</html>
