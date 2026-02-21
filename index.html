@@ -9,7 +9,7 @@ title: aubbie's hardests list
         <link rel="icon" type="image/ico" href="favicon.ico">
 
         <meta charset="utf-8">
-        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="assets/css/style.css">
     </head>
 
     <body>
@@ -29,9 +29,13 @@ title: aubbie's hardests list
                         </td>
 
                         <td>
-                            <a href="https://www.youtube.com/watch?v={{ level.youtube_id}}">
-                                <img src="https://img.youtube.com/vi/{{ level.youtube_id }}/sddefault.jpg">
-                            </a>
+                            {% unless level.youtube_id == #!novideo %}
+                                <a href="https://www.youtube.com/watch?v={{ level.youtube_id}}">
+                                    <img src="https://img.youtube.com/vi/{{ level.youtube_id }}/sddefault.jpg">
+                                </a>
+                            {% else %}
+                                <img src="assets/images/novideo.jpg">
+                            {% endunless %}
                         </td>
 
                         <td>
